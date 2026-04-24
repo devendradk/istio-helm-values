@@ -2,6 +2,16 @@
 
 Helm values for **Istio upstream charts** only, organized **one folder per chart** per cluster. Chart sources and versions are pinned in `argocd-applications`.
 
+## Versioned layout for clean upgrades
+
+Use version folders per cluster so each Istio upgrade is additive and easy to roll back:
+
+`clusters/<cluster>/<istio-version>/<component>/values.yaml`
+
+Example:
+
+`clusters/management/1.29.1/istiod/values.yaml`
+
 ## Install order (sidecar / default profile)
 
 Typical sync order (see Argo `sync-wave` annotations in Applications):

@@ -1,1 +1,19 @@
 # Istio istiod — test cluster (upstream chart defaults unless overridden)
+revisionTags:
+  - canary
+  - stable
+  - default
+
+global:
+  sds:
+    token:
+      aud: project-3d092af6-3c65-4b1c-982.svc.id.goog
+
+meshConfig:
+  trustDomain: project-3d092af6-3c65-4b1c-982.svc.id.goog
+  trustDomainAliases:
+    - project-3d092af6-3c65-4b1c-982.svc.id.goog
+
+pilot:
+  env:
+    TOKEN_AUDIENCES: project-3d092af6-3c65-4b1c-982.svc.id.goog

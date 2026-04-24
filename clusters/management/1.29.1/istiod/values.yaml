@@ -1,10 +1,12 @@
-# Istio istiod — prod cluster (upstream chart defaults unless overridden)
+# Istio istiod revision 1-29-1 — management cluster
+revision: 1-29-1
 revisionTags:
   - canary
   - stable
   - default
 
 global:
+  caAddress: cert-manager-istio-csr.cert-manager.svc:443
   sds:
     token:
       aud: project-3d092af6-3c65-4b1c-982.svc.id.goog
@@ -16,4 +18,5 @@ meshConfig:
 
 pilot:
   env:
+    EXTERNAL_CA: ISTIOD_RA_KUBERNETES_API
     TOKEN_AUDIENCES: project-3d092af6-3c65-4b1c-982.svc.id.goog

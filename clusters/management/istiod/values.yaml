@@ -1,7 +1,0 @@
-# Istio istiod — management cluster (upstream chart defaults unless overridden)
-global:
-  caAddress: cert-manager-istio-csr.cert-manager.svc:443
-
-pilot:
-  env:
-    EXTERNAL_CA: ISTIOD_RA_KUBERNETES_API
