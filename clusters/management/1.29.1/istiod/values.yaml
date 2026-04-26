@@ -7,7 +7,6 @@ revisionTags:
 
 global:
   caAddress: cert-manager-istio-csr.cert-manager.svc:443
-  pilotCertProvider: kubernetes
   sds:
     token:
       aud: project-3d092af6-3c65-4b1c-982.svc.id.goog
