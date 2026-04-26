@@ -1,2 +1,4 @@
 # Istio gateway — management cluster (version 1.29.1)
 revision: 1-29-1
+env:
+  ISTIO_META_TRUST_DOMAIN: project-3d092af6-3c65-4b1c-982.svc.id.goog
