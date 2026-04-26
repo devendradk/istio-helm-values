@@ -7,6 +7,7 @@ revisionTags:
 
 global:
   caAddress: cert-manager-istio-csr.cert-manager.svc:443
+  jwtPolicy: third-party-jwt
   sds:
     token:
       aud: istio-ca
@@ -20,4 +21,5 @@ pilot:
   env:
     ENABLE_CA_SERVER: "false"
     EXTERNAL_CA: ISTIOD_RA_KUBERNETES_API
+    PILOT_ENABLE_AMBIENT: "true"
     TOKEN_AUDIENCES: istio-ca
