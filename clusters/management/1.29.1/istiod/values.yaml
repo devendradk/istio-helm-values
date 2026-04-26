@@ -6,6 +6,7 @@ revisionTags:
   - default
 
 global:
+  pilotCertProvider: kubernetes
   caAddress: cert-manager-istio-csr.cert-manager.svc:443
   sds:
     token:
