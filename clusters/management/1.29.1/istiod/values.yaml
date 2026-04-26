@@ -9,7 +9,7 @@ global:
   caAddress: cert-manager-istio-csr.cert-manager.svc:443
   sds:
     token:
-      aud: project-3d092af6-3c65-4b1c-982.svc.id.goog
+      aud: istio-ca
 
 meshConfig:
   trustDomain: project-3d092af6-3c65-4b1c-982.svc.id.goog
@@ -20,4 +20,4 @@ pilot:
   env:
     ENABLE_CA_SERVER: "false"
     EXTERNAL_CA: ISTIOD_RA_KUBERNETES_API
-    TOKEN_AUDIENCES: project-3d092af6-3c65-4b1c-982.svc.id.goog
+    TOKEN_AUDIENCES: istio-ca
