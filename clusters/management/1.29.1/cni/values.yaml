@@ -1,1 +1,4 @@
 # Istio cni — management cluster (version 1.29.1)
+cni:
+  ambient:
+    enabled: true
